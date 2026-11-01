@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Du lịch Việt Nam - PYS Travel</title>
+    <link rel="stylesheet" href="./asset/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./asset/font/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./asset/css/style.css" />
+    <script src="./asset/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="sticky-top shadow-sm bg-white">
+      <div class="container-fluid">
+        <div class="container py-2 py-md-3">
+          <div class="row align-items-center justify-content-between">
+            <!-- Mobile Menu Toggle Button -->
+            <div class="col-2 d-flex d-md-none p-0 align-items-center">
+              <button
+                class="btn border-0 text-dark fs-3 p-1"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu"
+                aria-controls="mobileMenu"
+                aria-label="Toggle navigation"
+              >
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+
+            <!-- Logo -->
+            <div class="col-6 col-sm-4 col-md-2 p-0 text-center text-md-start">
+              <a href="#">
+                <img
+                  src="./asset/image/logo.png"
+                  class="img-fluid header__logo"
+                  alt="Logo"
+                />
+              </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="col-md-8 d-none d-md-block p-0">
+              <nav class="header__menu">
+                <ul class="mb-0">
+                  <li><a href="#">Tour mùa thu</a></li>
+                  <li><a href="#">Tour trong nước</a></li>
+                  <li><a href="#">Tour nước ngoài</a></li>
+                  <li><a href="#">Tour đoàn riêng</a></li>
+                  <li><a href="#">Dịch vụ visa</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- Header Right Icons -->
+            <div class="col-4 col-sm-3 col-md-2 p-0 my-auto">
+              <div class="d-flex justify-content-end align-items-center gap-2">
+                <div class="px-1">
+                  <a
+                    href="#"
+                    class="text-decoration-none text-dark fs-5 p-1 d-inline-block"
+                    title="Tài khoản"
+                  >
+                    <i class="fa-solid fa-user"></i>
+                  </a>
+                </div>
+                <div class="px-1 header__serch">
+                  <a
+                    href="#"
+                    id="searchToggle"
+                    class="text-decoration-none text-dark fs-5 p-1 d-inline-block"
+                    title="Tìm kiếm"
+                  >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </a>
+
+                  <div
+                    class="header__serch-dropdown bg-white shadow p-2"
+                    id="searchDropdown"
+                  >
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Tìm kiếm tour..."
+                      />
+                      <button class="btn btn-primary" type="button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- OFFCANVAS MOBILE NAVIGATION MENU -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="mobileMenu"
+      aria-labelledby="mobileMenuLabel"
+    >
+      <div class="offcanvas-header bg-light border-bottom">
+        <h5 class="offcanvas-title fw-bold text-primary" id="mobileMenuLabel">
+          <i class="fa-solid fa-compass me-2"></i>Danh mục Tour
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body p-0">
+        <ul class="list-group list-group-flush mobile-nav-list">
+          <li class="list-group-item py-3">
+            <a href="#" class="text-decoration-none text-dark fw-semibold d-block">
+              <i class="fa-solid fa-leaf text-success me-2"></i>Tour mùa thu
+            </a>
+          </li>
+          <li class="list-group-item py-3">
+            <a href="#" class="text-decoration-none text-dark fw-semibold d-block">
+              <i class="fa-solid fa-map-location-dot text-primary me-2"></i>Tour trong nước
+            </a>
+          </li>
+          <li class="list-group-item py-3">
+            <a href="#" class="text-decoration-none text-dark fw-semibold d-block">
+              <i class="fa-solid fa-plane text-info me-2"></i>Tour nước ngoài
+            </a>
+          </li>
+          <li class="list-group-item py-3">
+            <a href="#" class="text-decoration-none text-dark fw-semibold d-block">
+              <i class="fa-solid fa-users text-warning me-2"></i>Tour đoàn riêng
+            </a>
+          </li>
+          <li class="list-group-item py-3">
+            <a href="#" class="text-decoration-none text-dark fw-semibold d-block">
+              <i class="fa-solid fa-passport text-danger me-2"></i>Dịch vụ visa
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MAIN HERO BANNER -->
+    <section class="banner-section">
+      <div class="container p-0 p-md-2 banner-primary">
+        <img
+          src="./asset/image/anh1.jpg"
+          class="img-fluid rounded-md-3"
+          alt="Du lịch Việt Nam"
+        />
+        <div class="banner-content shadow">
+          <h1 class="fw-bold">Du lịch Việt Nam</h1>
+          <p class="d-none d-sm-block">
+            Cùng với những trải nghiệm khung cảnh rừng núi Tây Bắc hùng vĩ
+          </p>
+          <a href="#" class="btn btn-warning text-dark fw-bold px-4 py-2 mt-2">
+            Khám Phá <i class="fa-solid fa-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: TOUR HOT -->
+    <section>
+      <div class="container">
+        <h2 class="text-center fw-bold mb-4 section-title">
+          Tour Hót Nhất Trong Tháng
+        </h2>
+        <div class="row g-3">
+          <div class="col-6 col-md-3">
+            <div class="card h-100 tour-card border-0 shadow-sm">
+              <div class="card-img-wrapper">
+                <img
+                  src="./asset/image/anh1.jpg"
+                  class="card-img-top"
+                  alt="Tour 1"
+                />
+              </div>
+              <div class="card-body p-2 p-md-3">
+                <h6 class="card-title fw-bold text-truncate">Tour Tây Bắc Mùa Lúa Cín</h6>
+                <p class="text-danger fw-bold mb-0">3.590.000 <small>đ</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card h-100 tour-card border-0 shadow-sm">
+              <div class="card-img-wrapper">
+                <img
+                  src="./asset/image/anh1.jpg"
+                  class="card-img-top"
+                  alt="Tour 2"
+                />
+              </div>
+              <div class="card-body p-2 p-md-3">
+                <h6 class="card-title fw-bold text-truncate">Tour Đà Nẵng - Hội An</h6>
+                <p class="text-danger fw-bold mb-0">4.290.000 <small>đ</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card h-100 tour-card border-0 shadow-sm">
+              <div class="card-img-wrapper">
+                <img
+                  src="./asset/image/anh1.jpg"
+                  class="card-img-top"
+                  alt="Tour 3"
+                />
+              </div>
+              <div class="card-body p-2 p-md-3">
+                <h6 class="card-title fw-bold text-truncate">Tour Phú Quốc Ngắm Hoàng Hôn</h6>
+                <p class="text-danger fw-bold mb-0">5.990.000 <small>đ</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card h-100 tour-card border-0 shadow-sm">
+              <div class="card-img-wrapper">
+                <img
+                  src="./asset/image/anh1.jpg"
+                  class="card-img-top"
+                  alt="Tour 4"
+                />
+              </div>
+              <div class="card-body p-2 p-md-3">
+                <h6 class="card-title fw-bold text-truncate">Tour Sapa Chinh Phục Fansipan</h6>
+                <p class="text-danger fw-bold mb-0">2.890.000 <small>đ</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: TOUR TRONG NƯỚC & NƯỚC NGOÀI -->
+    <section>
+      <div class="container">
+        <div class="row g-4">
+          <!-- Tour Trong Nước -->
+          <div class="col-12 col-md-6">
+            <h3 class="fw-bold mb-3 pb-2 border-bottom text-primary">
+              <i class="fa-solid fa-location-dot me-2"></i>Tour Trong Nước
+            </h3>
+            <div class="d-flex flex-column gap-3">
+              <div class="row g-2 align-items-center tour-list-item shadow-sm p-2 rounded bg-white ms-0 me-0">
+                <div class="col-4 col-sm-3 col-md-4">
+                  <img
+                    src="./asset/image/anh1.jpg"
+                    class="img-fluid rounded tour-list-img"
+                    alt="Tour trong nước"
+                  />
+                </div>
+                <div class="col-8 col-sm-9 col-md-8">
+                  <p class="m-0 fw-bold tour-list-desc">
+                    Đà Nẵng là thành phố biển đẹp nhất Việt Nam, mang đến trải nghiệm tuyệt vời.
+                  </p>
+                  <p class="mb-0 mt-2 text-danger fw-bold">
+                    Giá Tour: 3.590.000 <sub>đ</sub>
+                  </p>
+                </div>
+              </div>
+
+              <div class="row g-2 align-items-center tour-list-item shadow-sm p-2 rounded bg-white ms-0 me-0">
+                <div class="col-4 col-sm-3 col-md-4">
+                  <img
+                    src="./asset/image/anh1.jpg"
+                    class="img-fluid rounded tour-list-img"
+                    alt="Tour trong nước"
+                  />
+                </div>
+                <div class="col-8 col-sm-9 col-md-8">
+                  <p class="m-0 fw-bold tour-list-desc">
+                    Hạ Long kì quan thiên nhiên thế giới với hàng nghìn hòn đảo lớn nhỏ.
+                  </p>
+                  <p class="mb-0 mt-2 text-danger fw-bold">
+                    Giá Tour: 2.990.000 <sub>đ</sub>
+                  </p>
+                </div>
+              </div>
+
+              <div class="row g-2 align-items-center tour-list-item shadow-sm p-2 rounded bg-white ms-0 me-0">
+                <div class="col-4 col-sm-3 col-md-4">
+                  <img
+                    src="./asset/image/anh1.jpg"
+                    class="img-fluid rounded tour-list-img"
+                    alt="Tour trong nước"
+                  />
+                </div>
+                <div class="col-8 col-sm-9 col-md-8">
+                  <p class="m-0 fw-bold tour-list-desc">
+                    Khám phá vùng đất cố đô Huế cổ kính với vẻ đẹp thơ mộng trầm mặc.
+                  </p>
+                  <p class="mb-0 mt-2 text-danger fw-bold">
+                    Giá Tour: 3.190.000 <sub>đ</sub>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tour Nước Ngoài -->
+          <div class="col-12 col-md-6">
+            <h3 class="fw-bold mb-3 pb-2 border-bottom text-primary">
+              <i class="fa-solid fa-plane-departure me-2"></i>Tour Nước Ngoài
+            </h3>
+            <div class="d-flex flex-column gap-3">
+              <div class="row g-2 align-items-center tour-list-item shadow-sm p-2 rounded bg-white ms-0 me-0">
+                <div class="col-4 col-sm-3 col-md-4">
+                  <img
+                    src="./asset/image/anh1.jpg"
+                    class="img-fluid rounded tour-list-img"
+                    alt="Tour nước ngoài"
+                  />
+                </div>
+                <div class="col-8 col-sm-9 col-md-8">
+                  <p class="m-0 fw-bold tour-list-desc">
+                    Tour Thái Lan 5 ngày 4 đêm khám phá thủ đô Bangkok & Pattaya sôi động.
+                  </p>
+                  <p class="mb-0 mt-2 text-danger fw-bold">
+                    Giá Tour: 6.890.000 <sub>đ</sub>
+                  </p>
+                </div>
+              </div>
+
+              <div class="row g-2 align-items-center tour-list-item shadow-sm p-2 rounded bg-white ms-0 me-0">
+                <div class="col-4 col-sm-3 col-md-4">
+                  <img
+                    src="./asset/image/anh1.jpg"
+                    class="img-fluid rounded tour-list-img"
+                    alt="Tour nước ngoài"
+                  />
+                </div>
+                <div class="col-8 col-sm-9 col-md-8">
+                  <p class="m-0 fw-bold tour-list-desc">
+                    Du lịch Nhật Bản mùa hoa anh đào rực rỡ và ngắm núi Phú Sĩ huyền thoại.
+                  </p>
+                  <p class="mb-0 mt-2 text-danger fw-bold">
+                    Giá Tour: 22.990.000 <sub>đ</sub>
+                  </p>
+                </div>
+              </div>
+
+              <div class="row g-2 align-items-center tour-list-item shadow-sm p-2 rounded bg-white ms-0 me-0">
+                <div class="col-4 col-sm-3 col-md-4">
+                  <img
+                    src="./asset/image/anh1.jpg"
+                    class="img-fluid rounded tour-list-img"
+                    alt="Tour nước ngoài"
+                  />
+                </div>
+                <div class="col-8 col-sm-9 col-md-8">
+                  <p class="m-0 fw-bold tour-list-desc">
+                    Khám phá Hàn Quốc đảo Nami mộng mơ & khu vui chơi Everland.
+                  </p>
+                  <p class="mb-0 mt-2 text-danger fw-bold">
+                    Giá Tour: 14.590.000 <sub>đ</sub>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION: TEAM BUILDING / CATEGORIES -->
+    <section>
+      <div class="container">
+        <h2 class="text-center fw-bold mb-4 section-title">
+          Chương Trình Nổi Bật
+        </h2>
+        <div class="row g-3">
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="block text-white rounded overflow-hidden shadow">
+              <img src="./asset/image/anh1.jpg" alt="Tour team building" />
+              <div class="block-overlay"></div>
+              <p class="fw-bold fs-5 mb-0">Tour team building</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="block text-white rounded overflow-hidden shadow">
+              <img src="./asset/image/anh1.jpg" alt="Tour doanh nghiệp" />
+              <div class="block-overlay"></div>
+              <p class="fw-bold fs-5 mb-0">Tour doanh nghiệp</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="block text-white rounded overflow-hidden shadow">
+              <img src="./asset/image/anh1.jpg" alt="Tour nghỉ dưỡng" />
+              <div class="block-overlay"></div>
+              <p class="fw-bold fs-5 mb-0">Tour nghỉ dưỡng</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="block text-white rounded overflow-hidden shadow">
+              <img src="./asset/image/anh1.jpg" alt="Tour gia đình" />
+              <div class="block-overlay"></div>
+              <p class="fw-bold fs-5 mb-0">Tour gia đình</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="block text-white rounded overflow-hidden shadow">
+              <img src="./asset/image/anh1.jpg" alt="Sự kiện Gala Dinner" />
+              <div class="block-overlay"></div>
+              <p class="fw-bold fs-5 mb-0">Sự kiện Gala Dinner</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main__footer mt-5">
+      <div class="container px-3 px-md-0">
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="pe-md-3 mb-3 mb-md-0">
+              <img
+                src="./asset/image/logo.png"
+                class="img-fluid footer-logo mb-3"
+                alt="Logo Footer"
+              />
+              <p class="text-secondary small">
+                PYS Travel - Công ty du lịch hàng đầu cung cấp các giải pháp du lịch chuyên nghiệp, sáng tạo.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3">
+            <h5 class="fw-bold mb-3 border-bottom pb-2">Hoạt động</h5>
+            <ul class="main__footer-list ps-0">
+              <li><a href="#">Về PYS Travel</a></li>
+              <li><a href="#">Khách hàng nói về PYS Travel</a></li>
+              <li><a href="#">Tuyển dụng</a></li>
+              <li><a href="#">Hoạt động của PYS Travel</a></li>
+              <li><a href="#">Báo chí nói về PYS Travel</a></li>
+              <li><a href="#">Blog du lịch</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3">
+            <h5 class="fw-bold mb-3 border-bottom pb-2">Thông tin Hữu ích</h5>
+            <ul class="main__footer-list ps-0">
+              <li><a href="#">Điều khoản sử dụng</a></li>
+              <li><a href="#">Chính sách bảo mật</a></li>
+              <li><a href="#">Hướng dẫn thanh toán</a></li>
+              <li><a href="#">Quy định hủy tour</a></li>
+              <li><a href="#">Câu hỏi thường gặp</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3">
+            <h5 class="fw-bold mb-3 border-bottom pb-2">Thông tin liên lạc</h5>
+            <ul class="main__footer-list ps-0">
+              <li class="mb-2">
+                <h6 class="mt-1 fs-6 fw-bold">
+                  <i class="fa-solid fa-location-dot text-danger me-1"></i>
+                  Trụ sở chính
+                </h6>
+                <span class="small text-secondary">213, Xã Đông Thạnh, TP. Hồ Chí Minh</span>
+              </li>
+              <li class="mb-2 small">
+                <i class="fa-solid fa-phone text-primary me-1"></i>
+                <b>Điện thoại:</b> <a href="tel:0379394669" class="text-decoration-none text-dark">0379394669</a>
+              </li>
+              <li class="small">
+                <i class="fa-solid fa-envelope text-warning me-1"></i>
+                <b>Email:</b> <a href="mailto:contact@pys.vn" class="text-decoration-none text-dark">contact@pys.vn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const searchToggle = document.getElementById('searchToggle');
+        const searchDropdown = document.getElementById('searchDropdown');
+
+        if (searchToggle && searchDropdown) {
+          searchToggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            searchDropdown.classList.toggle('active');
+          });
+
+          // Close search dropdown when clicking outside
+          document.addEventListener('click', function (e) {
+            if (
+              !searchToggle.contains(e.target) &&
+              !searchDropdown.contains(e.target)
+            ) {
+              searchDropdown.classList.remove('active');
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
